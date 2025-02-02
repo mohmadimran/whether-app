@@ -1,10 +1,7 @@
-export default function Card({ weatherData, loading }) {
-  console.log("whether data", weatherData);
+export default function Card({ weatherData}) {
   return (
     <>
-      {loading ? (
-        <p>Loading data…</p>
-      ) : (
+      
         <div className="weather-cards">
           <div className="weather-card">
             <h1>Temperature</h1>
@@ -23,7 +20,6 @@ export default function Card({ weatherData, loading }) {
             <p>{`${weatherData?.current.wind_kph} kph`}</p>
           </div>
         </div>
-      )}
     </>
   );
 }

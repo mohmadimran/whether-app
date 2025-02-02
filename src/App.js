@@ -23,14 +23,16 @@ function App() {
         console.error(err);
         alert("Failed to fetch weather data");
       })
-      .finally(() => setLoading(false));
+      .finally(() => {
+        setLoading(false);
+      });
   }, [city]);
 
   return (
     <div className="whether-page-container">
       <SearchBar searchCity={searchCity} />
-      {/* {loading && (<p>Loading data…</p>)} */}
-      {data && <Card weatherData={data} loading={loading}/>}
+      {loading && <p>Loading data…</p>}
+      {!loading && data && <Card weatherData={data} />}
     </div>
   );
 }
