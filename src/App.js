@@ -31,7 +31,7 @@ function App() {
   return (
     <div className="whether-page-container">
       <SearchBar searchCity={searchCity} />
-      {loading && <p>Loading data…</p>}
+      <p className="loading-text">{loading ? "Loading data..." : ""}</p> 
       {!loading && data && <Card weatherData={data} />}
     </div>
   );
