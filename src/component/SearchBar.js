@@ -5,7 +5,6 @@ export default function SearchBar({ searchCity }) {
 
   const handleSearch = () => {
     searchCity(city); 
-    setCity(""); 
   };
 
   return (

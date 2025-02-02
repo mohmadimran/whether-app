@@ -12,10 +12,9 @@ function App() {
     if (!city) return;
 
     setLoading(true);
-    axios
-      .get(
-        `http://api.weatherapi.com/v1/current.json?key=4d819f9a077d475da1282000250202&q=${city}`
-      )
+    axios.get(
+      `https://api.weatherapi.com/v1/current.json?key=4d819f9a077d475da1282000250202&q=${city}`
+    )
       .then((res) => {
         setLoading(false) ;
         setData(res.data);
