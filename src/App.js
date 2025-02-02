@@ -29,8 +29,8 @@ function App() {
   return (
     <div className="whether-page-container">
       <SearchBar searchCity={searchCity} />
-      {loading && (<p>Loading data…</p>)}
-      {data && <Card weatherData={data} />}
+      {/* {loading && (<p>Loading data…</p>)} */}
+      {data && <Card weatherData={data} loading={loading}/>}
     </div>
   );
 }
